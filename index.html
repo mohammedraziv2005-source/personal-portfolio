@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOHAMMED RAZI — Digital Marketer, AI Content Creator &amp; Creative Strategist</title>
+  <meta name="description" content="Official personal portfolio of Mohammed Razi. Digital marketer, AI content creator, and creative strategist crafting futuristic digital experiences, high-converting campaigns, and modern brand narratives.">
+  <meta name="keywords" content="Mohammed Razi, Digital Marketer, AI Content Creator, Creative Strategist, Prompt Engineering, Brand Strategy, Web Design, 2026 Portfolio">
+  <meta name="author" content="Mohammed Razi">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MOHAMMED RAZI — Cinematic Personal Portfolio">
+  <meta property="og:description" content="Turning ideas into digital impact through creativity, strategy and generative technology.">
+  <meta property="og:image" content="assets/images/razi-portrait.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Space Grotesk & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Film Grain Overlay Canvas -->
+  <canvas id="noise-canvas"></canvas>
+
+  <!-- Ambient Dynamic Lighting -->
+  <div class="ambient-glow-container" aria-hidden="true">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+  </div>
+
+  <!-- Custom Cinematic Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" aria-hidden="true">
+    <span class="cursor-text"></span>
+  </div>
+
+  <!-- Floating Cursor Skill Preview Container -->
+  <div id="skill-cursor-preview" class="skill-cursor-preview" aria-hidden="true">
+    <img src="assets/images/topic-digital-marketing.jpg" alt="Skill Preview">
+  </div>
+
+  <!-- =======================================================================
+       01. CINEMATIC PRELOADER
+       ======================================================================= -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-header">
+      <div class="status-tag">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM CALIBRATION // 2026</span>
+      </div>
+      <div>DIGITAL PORTFOLIO</div>
+    </div>
+
+    <div class="preloader-center">
+      <div class="preloader-logo">
+        MOHAMMED RAZI<span class="accent-dot">•</span>
+      </div>
+      <div class="preloader-role">DIGITAL MARKETER / AI CREATOR / STRATEGIST</div>
+    </div>
+
+    <div class="preloader-footer">
+      <div class="preloader-year">INITIALIZING VISUAL CORE</div>
+      <div class="preloader-counter">
+        <span id="preloader-number">0</span><span class="counter-unit">%</span>
+      </div>
+    </div>
+
+    <div class="preloader-bar-track">
+      <div id="preloader-bar-fill" class="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       02. STICKY NAVIGATION
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-link" id="brand-logo" aria-label="Mohammed Razi Home">
+        <span class="brand-title">MOHAMMED RAZI<span class="red-dot"></span></span>
+        <span class="brand-badge"><span class="live-dot"></span>AVAILABLE 2026</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#work" class="nav-link">WORK</a>
+        <a href="#services" class="nav-link">SERVICES</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn-talk" id="nav-btn-talk">[ LET'S TALK ]</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Animated Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-nav-list">
+      <a href="#hero" class="mobile-nav-link"><span class="link-num">00</span> HOME</a>
+      <a href="#about" class="mobile-nav-link"><span class="link-num">01</span> ABOUT</a>
+      <a href="#skills" class="mobile-nav-link"><span class="link-num">02</span> SKILLS</a>
+      <a href="#work" class="mobile-nav-link"><span class="link-num">03</span> WORK</a>
+      <a href="#services" class="mobile-nav-link"><span class="link-num">04</span> SERVICES</a>
+      <a href="#contact" class="mobile-nav-link"><span class="link-num">05</span> CONTACT</a>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <a href="mailto:mohammedrazi2005@gmail.com">mohammedrazi2005@gmail.com</a>
+      <a href="tel:+917907114714">+91 7907114714</a>
+      <p style="color: #666; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;">© 2026 MOHAMMED RAZI</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         03. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-main-container">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge-card">
+            <span class="pulse-indicator">
+              <span class="dot"></span>
+              <span class="ring"></span>
+            </span>
+            <span class="hero-badge-text">AVAILABLE FOR CREATIVE PROJECTS</span>
+            <span class="hero-badge-year">2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line"><span class="word-reveal">TURNING</span></span>
+            <span class="title-line"><span class="word-reveal">IDEAS INTO</span></span>
+            <span class="title-line"><span class="word-reveal text-accent">DIGITAL IMPACT.</span></span>
+          </h1>
+
+          <div class="hero-roles">
+            <span>DIGITAL MARKETER</span>
+            <span class="role-sep">/</span>
+            <span>AI CONTENT CREATOR</span>
+            <span class="role-sep">/</span>
+            <span>CREATIVE STRATEGIST</span>
+          </div>
+
+          <p class="hero-description">
+            I create digital experiences, campaigns and content that combine creativity, strategy and technology.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary" id="hero-btn-work">
+              <span>VIEW MY WORK</span>
+              <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+            </a>
+            <a href="#contact" class="btn-secondary" id="hero-btn-talk">
+              <span>LET'S TALK</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual (Editorial Portrait Frame) -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-visual-frame" id="hero-visual-frame">
+            <div class="visual-tag-top">
+              <span class="tag-label">DIRECTOR IDENTITY</span>
+              <span class="tag-value">MOHAMMED RAZI V</span>
+            </div>
+
+            <img src="assets/images/razi-portrait.png" alt="Mohammed Razi - Digital Marketer and AI Content Creator" class="hero-portrait-image">
+            <div class="hero-visual-overlay"></div>
+
+            <div class="visual-badge-floating">
+              <div class="badge-icon">
+                <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+              </div>
+              <div class="badge-meta">
+                <span class="badge-num">50+</span>
+                <span class="badge-title">CAMPAIGNS LAUNCHED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Footer Indicator -->
+      <div class="hero-footer">
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="scroll-arrow">↓</span>
+        </a>
+        <div class="hero-footer-location">
+          <span>BASED IN INDIA // WORLDWIDE REACH</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         04. ABOUT SECTION
+         ======================================================================= -->
+    <section class="section-wrapper about-section" id="about">
+      <div class="container">
+        <div class="section-label">01 — ABOUT ME</div>
+
+        <div class="about-header-grid">
+          <div>
+            <h2 class="section-heading-giant">
+              "I BUILD DIGITAL<br>
+              EXPERIENCES THAT<br>
+              <span class="text-accent" style="color: var(--accent-red);">PEOPLE REMEMBER."</span>
+            </h2>
+          </div>
+
+          <div class="about-bio-card">
+            <p class="about-quote">
+              "I’m a digital marketing professional passionate about creative campaigns, AI-powered content, social media, branding and modern digital experiences."
+            </p>
+            <div class="about-meta-row">
+              <div>
+                <strong>FOCUS</strong><br>
+                HIGH-CONVERTING STRATEGY
+              </div>
+              <div>
+                <strong>AI STACK</strong><br>
+                NEXT-GEN GENERATION
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Disciplines & Statistics (01 to 04) -->
+        <div class="about-disciplines-grid">
+          <div class="discipline-card">
+            <div class="discipline-top">
+              <span class="discipline-number">01</span>
+              <div class="discipline-icon-box">
+                <i data-lucide="trending-up" style="width: 22px; height: 22px;"></i>
+              </div>
+            </div>
+            <div class="discipline-bottom">
+              <h3 class="discipline-title">DIGITAL MARKETING</h3>
+              <p class="discipline-desc">Data-driven performance marketing, multi-channel growth funnels and high-ROI conversion architectures.</p>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="discipline-top">
+              <span class="discipline-number">02</span>
+              <div class="discipline-icon-box">
+                <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+              </div>
+            </div>
+            <div class="discipline-bottom">
+              <h3 class="discipline-title">AI CONTENT</h3>
+              <p class="discipline-desc">Hyper-realistic advertising visuals, AI character commercials, prompt engineering, and synthetic media.</p>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="discipline-top">
+              <span class="discipline-number">03</span>
+              <div class="discipline-icon-box">
+                <i data-lucide="share-2" style="width: 22px; height: 22px;"></i>
+              </div>
+            </div>
+            <div class="discipline-bottom">
+              <h3 class="discipline-title">SOCIAL MEDIA</h3>
+              <p class="discipline-desc">Viral content strategies, atmospheric storytelling, audience expansion, and cultural brand affinity.</p>
+            </div>
+          </div>
+
+          <div class="discipline-card">
+            <div class="discipline-top">
+              <span class="discipline-number">04</span>
+              <div class="discipline-icon-box">
+                <i data-lucide="layout" style="width: 22px; height: 22px;"></i>
+              </div>
+            </div>
+            <div class="discipline-bottom">
+              <h3 class="discipline-title">WEB DESIGN</h3>
+              <p class="discipline-desc">Editorial typography, seamless UI/UX design, interactive motion mechanics, and award-grade aesthetics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         05. SKILLS SECTION
+         ======================================================================= -->
+    <section class="section-wrapper skills-section" id="skills">
+      <div class="container skills-wrapper">
+        <div class="section-label">CAPABILITIES // EXPERTISE</div>
+        <h2 class="section-heading-giant">MY SKILLS</h2>
+        <p class="section-subtext">
+          Interactive agency proficiency matrix spanning strategic digital performance, generative artificial intelligence, and visual design.
+        </p>
+
+        <!-- Interactive Typography Skill List -->
+        <div class="skills-list">
+          <div class="skill-item" data-preview="assets/images/topic-digital-marketing.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">01</span>
+              <span class="skill-name">DIGITAL MARKETING</span>
+            </div>
+            <span class="skill-badge">GROWTH &amp; ADS</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-mercedes.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">02</span>
+              <span class="skill-name">SOCIAL MEDIA MARKETING</span>
+            </div>
+            <span class="skill-badge">VIRAL STRATEGY</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-hospital.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">03</span>
+              <span class="skill-name">CONTENT STRATEGY</span>
+            </div>
+            <span class="skill-badge">EDITORIAL</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-pepsi.png">
+            <div class="skill-title-group">
+              <span class="skill-index">04</span>
+              <span class="skill-name">AI CONTENT CREATION</span>
+            </div>
+            <span class="skill-badge">GENERATIVE AI</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-kfc.svg">
+            <div class="skill-title-group">
+              <span class="skill-index">05</span>
+              <span class="skill-name">PROMPT ENGINEERING</span>
+            </div>
+            <span class="skill-badge">PRECISION PROMPTS</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-spiderman.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">06</span>
+              <span class="skill-name">GRAPHIC DESIGN</span>
+            </div>
+            <span class="skill-badge">VISUAL IDENTITY</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/project-hiq-meal.png">
+            <div class="skill-title-group">
+              <span class="skill-index">07</span>
+              <span class="skill-name">VIDEO CONTENT</span>
+            </div>
+            <span class="skill-badge">CINEMATIC REELS</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/topic-portfolio-ui.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">08</span>
+              <span class="skill-name">WEB DESIGN</span>
+            </div>
+            <span class="skill-badge">UI / UX / MOTION</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/topic-digital-marketing.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">09</span>
+              <span class="skill-name">SEO</span>
+            </div>
+            <span class="skill-badge">ORGANIC VISIBILITY</span>
+          </div>
+
+          <div class="skill-item" data-preview="assets/images/topic-creative-agency.jpg">
+            <div class="skill-title-group">
+              <span class="skill-index">10</span>
+              <span class="skill-name">BRAND STRATEGY</span>
+            </div>
+            <span class="skill-badge">POSITIONING</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         06. SELECTED WORK & HORIZONTAL SCROLLING PORTFOLIO
+         ======================================================================= -->
+    <section class="work-section" id="work">
+      <div class="section-wrapper" style="padding-bottom: 2rem;">
+        <div class="container">
+          <div class="section-label">02 — SELECTED WORK</div>
+          <div class="work-header-container">
+            <div>
+              <h2 class="section-heading-giant">
+                "PROJECTS<br>
+                THAT SPEAK<br>
+                <span style="color: var(--accent-red);">FOR THEMSELVES."</span>
+              </h2>
+            </div>
+            <p class="section-subtext">
+              Curated editorial case studies across commercial branding, AI advertising direction, and high-impact digital experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal Pinned Scroll Track -->
+      <div class="horizontal-scroll-container">
+        <div class="horizontal-track">
+          <!-- Project 01: HIQ Foods -->
+          <article class="project-card" data-project="hiq-foods">
+            <div class="project-card-top-tag">PROJECT 01 // BRAND IDENTITY</div>
+            <div class="project-card-image-box">
+              <img src="assets/images/project-hiq-mango.png" alt="HIQ Foods Brand Strategy and Packaging" class="project-card-img">
+              <div class="project-card-overlay"></div>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">HIQ FOODS</h3>
+              <div class="project-card-category">Marketing Research / Brand Strategy</div>
+              <div class="project-card-cta">
+                <span>EXPLORE CASE STUDY</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: KFC Campaign -->
+          <article class="project-card" data-project="kfc-campaign">
+            <div class="project-card-top-tag">PROJECT 02 // AI ADVERTISING</div>
+            <div class="project-card-image-box">
+              <img src="assets/images/project-kfc.svg" alt="KFC AI Campaign Creative Direction" class="project-card-img">
+              <div class="project-card-overlay"></div>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">KFC CAMPAIGN</h3>
+              <div class="project-card-category">AI Advertising / Creative Direction</div>
+              <div class="project-card-cta">
+                <span>EXPLORE CASE STUDY</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: Diet Pepsi -->
+          <article class="project-card" data-project="diet-pepsi">
+            <div class="project-card-top-tag">PROJECT 03 // PRODUCT CAMPAIGN</div>
+            <div class="project-card-image-box">
+              <img src="assets/images/project-pepsi.png" alt="Diet Pepsi AI Character Advertisement" class="project-card-img">
+              <div class="project-card-overlay"></div>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">DIET PEPSI</h3>
+              <div class="project-card-category">AI Character Advertisement</div>
+              <div class="project-card-cta">
+                <span>EXPLORE CASE STUDY</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04: Personal Portfolio -->
+          <article class="project-card" data-project="personal-portfolio">
+            <div class="project-card-top-tag">PROJECT 04 // WEB DEVELOPMENT</div>
+            <div class="project-card-image-box">
+              <img src="assets/images/topic-portfolio-ui.jpg" alt="Personal Portfolio Web Design" class="project-card-img" style="object-position: top center;">
+              <div class="project-card-overlay"></div>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">PERSONAL PORTFOLIO</h3>
+              <div class="project-card-category">Web Design / Creative Development</div>
+              <div class="project-card-cta">
+                <span>EXPLORE CASE STUDY</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 05: Social Media Campaign -->
+          <article class="project-card" data-project="social-campaign">
+            <div class="project-card-top-tag">PROJECT 05 // VISUAL STRATEGY</div>
+            <div class="project-card-image-box">
+              <img src="assets/images/project-mercedes.jpg" alt="Social Media Campaign Mercedes AMG G63 Poster" class="project-card-img">
+              <div class="project-card-overlay"></div>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">SOCIAL MEDIA CAMPAIGN</h3>
+              <div class="project-card-category">Content Strategy / Visual Design</div>
+              <div class="project-card-cta">
+                <span>EXPLORE CASE STUDY</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         07. AI CREATIVE SECTION ("CREATING WITH AI")
+         ======================================================================= -->
+    <section class="ai-section" id="ai-creative">
+      <div class="ai-header-wrapper">
+        <div class="container">
+          <div class="section-label">GENERATIVE LAB // SYNTHETIC MEDIA</div>
+          <h2 class="section-heading-giant">CREATING WITH AI</h2>
+          <p class="section-subtext" style="font-family: var(--font-display); font-size: 1.35rem; color: #FFFFFF; letter-spacing: -0.01em;">
+            "FROM PROMPTS TO VISUAL EXPERIENCES."
+          </p>
+        </div>
+      </div>
+
+      <!-- Horizontal Parallax Stream -->
+      <div class="ai-marquee-wrapper">
+        <!-- Ticker Row 1 -->
+        <div class="ai-ticker" id="ai-ticker-1">
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-pepsi.png" alt="AI Advertisement Diet Pepsi">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">PRODUCT ADVERTISING</span>
+                <div class="item-title">Diet Pepsi Splash Dynamic</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-kfc.svg" alt="AI Video Concept KFC">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">AI ADVERTISEMENT</span>
+                <div class="item-title">KFC Cyber Crunch Lab</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-hiq-mango.png" alt="Food Campaign Mango">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">FOOD CAMPAIGN</span>
+                <div class="item-title">Hi-Q Tropical Ripe Mango</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-mercedes.jpg" alt="Creative Posters G-Wagon">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">CREATIVE POSTER</span>
+                <div class="item-title">Mercedes-AMG The Wolf</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-hiq-meal.png" alt="Culinary Food Campaign">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">BRAND VISUAL</span>
+                <div class="item-title">Authentic Kerala Jackfruit Meal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticker Row 2 -->
+        <div class="ai-ticker" id="ai-ticker-2">
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-spiderman.jpg" alt="Pop Culture Graphic Concept">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">AI POP CULTURE</span>
+                <div class="item-title">Aesthetic Music Montage</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-hospital.jpg" alt="Healthcare Brand Visual">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">BRAND VISUALS</span>
+                <div class="item-title">Ahalia Multi-Specialty</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/project-hiq-jackfruit.png" alt="Packaging AI Visual">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">PRODUCT PACKAGING</span>
+                <div class="item-title">Hi-Q Ripped Jackfruit</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/topic-creative-agency.jpg" alt="Creative Studio UI Platform">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">AI STUDIO PLATFORMS</span>
+                <div class="item-title">Technexa Digital Platform</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-ticker-item">
+            <img src="assets/images/topic-web-design.jpg" alt="AI Digital Experience Design">
+            <div class="ai-ticker-caption">
+              <div>
+                <span class="item-tag">DIGITAL EXPERIENCES</span>
+                <div class="item-title">Next-Gen Web Interfaces</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         08. SERVICES SECTION (EXPANDABLE ACCORDION)
+         ======================================================================= -->
+    <section class="section-wrapper services-section" id="services">
+      <div class="container">
+        <div class="section-label">03 — SERVICES</div>
+        <h2 class="section-heading-giant">
+          "WHAT I CAN<br>
+          <span style="color: var(--accent-red);">CREATE FOR YOU."</span>
+        </h2>
+        <p class="section-subtext">
+          High-tier marketing and creative capabilities engineered to scale brands, capture market share, and drive unforgettable digital presence.
+        </p>
+
+        <!-- 4 Large Interactive Service Accordion Sections -->
+        <div class="services-list">
+          <!-- Service 01 -->
+          <div class="service-item expanded" id="service-01">
+            <div class="service-header">
+              <div class="service-title-col">
+                <span class="service-num">01</span>
+                <h3 class="service-name">DIGITAL MARKETING</h3>
+              </div>
+              <div class="service-arrow-box">
+                <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <div class="service-body-grid">
+                <div>
+                  <p class="service-desc-text">
+                    Comprehensive full-funnel performance marketing designed to turn passive traffic into loyal paying customers. From high-converting Meta and Google Ads to precision tracking, attribution modeling, and customer lifetime value optimization.
+                  </p>
+                  <div class="service-capabilities">
+                    <span class="capability-pill">META ADS &amp; GOOGLE PPC</span>
+                    <span class="capability-pill">FUNNEL ARCHITECTURE</span>
+                    <span class="capability-pill">CRO &amp; A/B TESTING</span>
+                    <span class="capability-pill">DATA ANALYTICS</span>
+                  </div>
+                </div>
+                <div class="service-media-card">
+                  <img src="assets/images/topic-digital-marketing.jpg" alt="Digital Marketing Strategy &amp; Ads">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 02 -->
+          <div class="service-item" id="service-02">
+            <div class="service-header">
+              <div class="service-title-col">
+                <span class="service-num">02</span>
+                <h3 class="service-name">SOCIAL MEDIA</h3>
+              </div>
+              <div class="service-arrow-box">
+                <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <div class="service-body-grid">
+                <div>
+                  <p class="service-desc-text">
+                    Creative social content strategies engineered for algorithmic virality and audience retention. We craft high-energy vertical video narratives, aesthetic typographic carousels, and trend-responsive cultural campaigns.
+                  </p>
+                  <div class="service-capabilities">
+                    <span class="capability-pill">ORGANIC VIRAL REELS</span>
+                    <span class="capability-pill">CONTENT CALENDARS</span>
+                    <span class="capability-pill">COMMUNITY GROWTH</span>
+                    <span class="capability-pill">INFLUENCER SYNERGIES</span>
+                  </div>
+                </div>
+                <div class="service-media-card">
+                  <img src="assets/images/project-mercedes.jpg" alt="Social Media Mercedes Campaign">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 03 -->
+          <div class="service-item" id="service-03">
+            <div class="service-header">
+              <div class="service-title-col">
+                <span class="service-num">03</span>
+                <h3 class="service-name">AI CONTENT CREATION</h3>
+              </div>
+              <div class="service-arrow-box">
+                <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <div class="service-body-grid">
+                <div>
+                  <p class="service-desc-text">
+                    Pioneering generative AI production pipelines that deliver high-end commercial imagery and synthetic video at a fraction of traditional production costs. Hyper-realistic product mockups, AI virtual models, and surreal campaign key-visuals.
+                  </p>
+                  <div class="service-capabilities">
+                    <span class="capability-pill">MIDJOURNEY &amp; FLUX WORKFLOWS</span>
+                    <span class="capability-pill">SYNTHETIC PRODUCT SHOOTS</span>
+                    <span class="capability-pill">AI CHARACTER ADS</span>
+                    <span class="capability-pill">PROMPT OPTIMIZATION</span>
+                  </div>
+                </div>
+                <div class="service-media-card">
+                  <img src="assets/images/project-pepsi.png" alt="AI Content Creation Diet Pepsi">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 04 -->
+          <div class="service-item" id="service-04">
+            <div class="service-header">
+              <div class="service-title-col">
+                <span class="service-num">04</span>
+                <h3 class="service-name">WEB &amp; BRAND DESIGN</h3>
+              </div>
+              <div class="service-arrow-box">
+                <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <div class="service-body-grid">
+                <div>
+                  <p class="service-desc-text">
+                    Award-caliber website development and bold visual brand systems. High-contrast typography, cinematic micro-interactions, responsive fluid grids, and memorable interactive storytelling that elevates your brand perception instantly.
+                  </p>
+                  <div class="service-capabilities">
+                    <span class="capability-pill">EDITORIAL UI / UX DESIGN</span>
+                    <span class="capability-pill">GSAP MOTION DEVELOPMENT</span>
+                    <span class="capability-pill">BRAND IDENTITY SYSTEMS</span>
+                    <span class="capability-pill">MOBILE-FIRST ARCHITECTURE</span>
+                  </div>
+                </div>
+                <div class="service-media-card">
+                  <img src="assets/images/topic-web-design.jpg" alt="Web and Brand Design Preview">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         09. MY PROCESS (VERTICAL TIMELINE WITH GLOWING TRACE)
+         ======================================================================= -->
+    <section class="section-wrapper process-section" id="process">
+      <div class="container">
+        <div class="section-label">METHODOLOGY // WORKFLOW</div>
+        <h2 class="section-heading-giant">
+          "FROM IDEA<br>
+          <span style="color: var(--accent-red);">TO EXECUTION."</span>
+        </h2>
+        <p class="section-subtext">
+          A disciplined, battle-tested framework ensuring every campaign and digital experience is strategic, timely, and commercially impactful.
+        </p>
+
+        <!-- Vertical Timeline with Scroll Progress Line -->
+        <div class="process-timeline">
+          <div class="process-timeline-progress"></div>
+
+          <!-- 01 DISCOVER -->
+          <div class="process-step-item active">
+            <div class="process-node"></div>
+            <div class="process-step-header">
+              <span class="process-step-phase">01 — DISCOVER</span>
+              <h3 class="process-step-title">DISCOVER</h3>
+            </div>
+            <p class="process-step-desc">
+              Understand the brand, competitive landscape, core audience psychology, and specific business objectives before writing a single word or generating a single frame.
+            </p>
+          </div>
+
+          <!-- 02 STRATEGIZE -->
+          <div class="process-step-item">
+            <div class="process-node"></div>
+            <div class="process-step-header">
+              <span class="process-step-phase">02 — STRATEGIZE</span>
+              <h3 class="process-step-title">STRATEGIZE</h3>
+            </div>
+            <p class="process-step-desc">
+              Create the overarching marketing direction, content architecture, channel distribution strategy, and core visual moodboards.
+            </p>
+          </div>
+
+          <!-- 03 CREATE -->
+          <div class="process-step-item">
+            <div class="process-node"></div>
+            <div class="process-step-header">
+              <span class="process-step-phase">03 — CREATE</span>
+              <h3 class="process-step-title">CREATE</h3>
+            </div>
+            <p class="process-step-desc">
+              Develop visuals, AI assets, copywriting, responsive code, and campaign content with rigorous attention to cinematic quality and brand fidelity.
+            </p>
+          </div>
+
+          <!-- 04 LAUNCH -->
+          <div class="process-step-item">
+            <div class="process-node"></div>
+            <div class="process-step-header">
+              <span class="process-step-phase">04 — LAUNCH</span>
+              <h3 class="process-step-title">LAUNCH</h3>
+            </div>
+            <p class="process-step-desc">
+              Put the idea into action across all targeted touchpoints with precision tracking, conversion pixels, and synchronized publishing schedules.
+            </p>
+          </div>
+
+          <!-- 05 OPTIMIZE -->
+          <div class="process-step-item">
+            <div class="process-node"></div>
+            <div class="process-step-header">
+              <span class="process-step-phase">05 — OPTIMIZE</span>
+              <h3 class="process-step-title">OPTIMIZE</h3>
+            </div>
+            <p class="process-step-desc">
+              Measure real-time performance indicators, analyze user engagement drop-offs, iterate on creative variants, and scale profitable marketing channels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. PERSONAL BRANDING (FULLSCREEN SEQUENTIAL TYPOGRAPHY)
+         ======================================================================= -->
+    <section class="branding-section" id="branding">
+      <div class="branding-content">
+        <h2 class="branding-headline">CREATIVE MIND.</h2>
+        <h2 class="branding-headline accent">STRATEGIC THINKER.</h2>
+        <h2 class="branding-headline">DIGITAL BUILDER.</h2>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         11. CONTACT SECTION
+         ======================================================================= -->
+    <section class="section-wrapper contact-section" id="contact">
+      <div class="container">
+        <div class="section-label">GET IN TOUCH // INITIATE</div>
+        <h2 class="section-heading-giant">
+          "LET'S CREATE<br>
+          SOMETHING<br>
+          <span style="color: var(--accent-red);">IMPACTFUL."</span>
+        </h2>
+        <p class="section-subtext">
+          Have an idea, project or campaign in mind? Let's turn it into something people remember.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Left Column Info -->
+          <div class="contact-info-col">
+            <div class="contact-meta-group">
+              <div class="contact-card-item">
+                <span class="contact-card-label">DIRECT EMAIL</span>
+                <a href="mailto:mohammedrazi2005@gmail.com" class="contact-card-value">mohammedrazi2005@gmail.com</a>
+              </div>
+
+              <div class="contact-card-item">
+                <span class="contact-card-label">DIRECT PHONE / WHATSAPP</span>
+                <a href="tel:+917907114714" class="contact-card-value">+91 7907114714</a>
+              </div>
+
+              <div class="contact-card-item">
+                <span class="contact-card-label">PROFESSIONAL NETWORK</span>
+                <a href="https://www.linkedin.com/in/mohammed-razi-v-50a1ab2b0" target="_blank" rel="noopener noreferrer" class="contact-card-value">linkedin.com/in/mohammed-razi-v</a>
+              </div>
+
+              <div class="contact-card-item">
+                <span class="contact-card-label">CURRENT AVAILABILITY</span>
+                <span class="contact-card-value" style="color: #22c55e;">OPEN FOR 2026 PROJECTS</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+              <p style="color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase;">
+                LOCATION: INDIA // AVAILABLE WORLDWIDE FOR REMOTE STRATEGY &amp; CAMPAIGNS
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column Interactive Form -->
+          <div class="contact-form-card">
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">YOUR NAME</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alexander Vance" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">YOUR EMAIL ADDRESS</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-project-type" class="form-label">PROJECT TYPE</label>
+                <select id="form-project-type" name="projectType" class="form-select" required>
+                  <option value="" disabled selected>Select Engagement Scope</option>
+                  <option value="Digital Marketing Campaign">Digital Marketing Campaign</option>
+                  <option value="AI Content & Commercials">AI Content &amp; Commercials</option>
+                  <option value="Social Media Strategy">Social Media Growth Strategy</option>
+                  <option value="Web & Brand Experience">Web &amp; Brand Experience Design</option>
+                  <option value="Complete Brand Overhaul">Comprehensive Marketing Overhaul</option>
+                  <option value="Consulting & Advisory">Strategic Advisory / Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">PROJECT BRIEF &amp; OBJECTIVES</label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your goals, timelines, and project scope..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="form-submit-btn">
+                <span>START A CONVERSATION →</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       12. FOOTER
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-name">MOHAMMED RAZI</span>
+          <span class="footer-role">DIGITAL MARKETER / AI CONTENT CREATOR / CREATIVE STRATEGIST</span>
+        </div>
+
+        <div class="footer-nav-links">
+          <div class="footer-link-group">
+            <span class="footer-group-title">NAVIGATION</span>
+            <a href="#hero">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#work">WORK</a>
+            <a href="#services">SERVICES</a>
+          </div>
+
+          <div class="footer-link-group">
+            <span class="footer-group-title">CONNECT</span>
+            <a href="https://www.linkedin.com/in/mohammed-razi-v-50a1ab2b0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="mailto:mohammedrazi2005@gmail.com">Email</a>
+            <a href="https://wa.me/917907114714" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 MOHAMMED RAZI. ALL RIGHTS RESERVED.
+        </p>
+
+        <a href="#hero" class="btn-top" id="footer-btn-top">
+          <span>BACK TO TOP</span>
+          <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       13. INTERACTIVE CASE STUDY MODAL
+       ======================================================================= -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study Modal">×</button>
+
+      <div class="modal-header-meta">
+        <span class="modal-pill" id="modal-category-pill">MARKETING RESEARCH</span>
+        <span style="color: var(--text-muted); font-size: 0.8rem;" id="modal-year-pill">2026</span>
+      </div>
+
+      <h2 class="modal-project-title" id="modal-title">HIQ FOODS</h2>
+
+      <div class="modal-hero-image-wrap">
+        <img id="modal-hero-img" src="assets/images/project-hiq-mango.png" alt="Project Case Study Image">
+      </div>
+
+      <div class="modal-body-grid">
+        <div class="modal-narrative">
+          <h4>THE CHALLENGE</h4>
+          <p id="modal-challenge"></p>
+
+          <h4>STRATEGIC DIRECTION</h4>
+          <p id="modal-strategy"></p>
+
+          <h4>AI &amp; VISUAL EXECUTION</h4>
+          <p id="modal-execution"></p>
+
+          <h4>KEY RESULTS &amp; IMPACT</h4>
+          <p id="modal-results" style="color: #FFFFFF; font-weight: 600;"></p>
+        </div>
+
+        <div class="modal-sidebar">
+          <div class="modal-meta-block">
+            <span>CLIENT / BRAND</span>
+            <strong id="modal-client">HI-Q NATURAL FOODS</strong>
+          </div>
+
+          <div class="modal-meta-block">
+            <span>ROLE &amp; SCOPE</span>
+            <strong id="modal-role">BRAND STRATEGY &amp; AI CREATIVE</strong>
+          </div>
+
+          <div class="modal-meta-block">
+            <span>YEAR</span>
+            <strong>2026</strong>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <a href="#contact" class="btn-primary" style="width: 100%; justify-content: center;" onclick="document.getElementById('modal-close-btn').click();">
+              <span>DISCUSS SIMILAR PROJECT</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons Initialization -->
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+
+  <!-- Main Application Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
